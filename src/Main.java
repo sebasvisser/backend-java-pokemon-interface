@@ -34,7 +34,9 @@ public class Main {
         pokemonGym.printPokemon(pokemons);
         System.out.println("Would you like to enter a gym looking for a fight?");
         System.out.println("Please enter yes or no");
-        if (speler_A.nextLine().equals("yes")) {
+        // Stiekem kleine aanpassing zodat je ook speelt als je Yes typt ipv alleen yes
+        String response = speler_A.nextLine().toLowerCase();
+        if(response.equals("yes") || response.equals("y")) {
             pokemonGym.enteredTheGym(player1);
         }
     }
