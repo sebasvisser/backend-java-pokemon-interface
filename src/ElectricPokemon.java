@@ -46,7 +46,8 @@ public class ElectricPokemon implements Pokemon {
         return "Electric";
     }
 
-    @Override
+// todo moet dit nog iets gaan doen?
+  @Override
     public List<String> getAttacks() {
         return null;
     }
@@ -64,11 +65,39 @@ public class ElectricPokemon implements Pokemon {
         electricAttack(gymPokemon);
     }
 
+    public void electroBall(Pokemon pokemon, Pokemon gymPokemon) {
+        System.out.println(pokemon.getName()
+                + " attacks "
+                + gymPokemon.getName()
+                + " with Electro Ball");
+        electricAttack(gymPokemon);
+    }
+
+    public void thunder(Pokemon pokemon, Pokemon gymPokemon) {
+        System.out.println(pokemon.getName()
+                + " attacks "
+                + gymPokemon.getName()
+                + " with Thunder");
+        electricAttack(gymPokemon);
+        if(Objects.equals(gymPokemon.getType(), "Electric")){
+            gymPokemon.setHp(-10);
+        }
+        pokemon.setHp(-10);
+    }
+
+    public void voltTackle(Pokemon pokemon, Pokemon gymPokemon) {
+        System.out.println(pokemon.getName()
+                + " attacks "
+                + gymPokemon.getName()
+                + " with Volt Tackle");
+        electricAttack(gymPokemon);
+    }
+
     private void electricAttack(Pokemon gymPokemon) {
         if(Objects.equals(gymPokemon.getType(), "Water")){
             System.out.println("It's Super Effective!");
             System.out.println(gymPokemon.getName()
-            + " loses 20 hp.");
+                    + " loses 20 hp.");
             gymPokemon.setHp(20);
             System.out.println(gymPokemon.getName()
                     + " has "
@@ -105,31 +134,6 @@ public class ElectricPokemon implements Pokemon {
                     + " hp remaining.");
         }
     }
-
-    public void electroBall(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName()
-                + " attacks "
-                + gymPokemon.getName()
-                + " with Electro Ball");
-        electricAttack(gymPokemon);
-    }
-
-    public void thunder(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName()
-                + " attacks "
-                + gymPokemon.getName()
-                + " with Thunder");
-        electricAttack(gymPokemon);
-    }
-
-    public void voltTackle(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName()
-                + " attacks "
-                + gymPokemon.getName()
-                + " with Volt Tackle");
-        electricAttack(gymPokemon);
-    }
-
     public void levelUp(){
         level++;
     }
