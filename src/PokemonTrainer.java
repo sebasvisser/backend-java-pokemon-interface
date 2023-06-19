@@ -7,5 +7,6 @@ public class PokemonTrainer {
         this.pokemons = pokemons;
     }
 
+
     // other methods...
 }
