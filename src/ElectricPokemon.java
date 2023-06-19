@@ -129,4 +129,8 @@ public class ElectricPokemon implements Pokemon {
                 + " with Volt Tackle");
         electricAttack(gymPokemon);
     }
+
+    public void levelUp(){
+        level++;
+    }
 }
