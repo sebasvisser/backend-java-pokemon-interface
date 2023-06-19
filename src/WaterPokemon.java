@@ -50,6 +50,11 @@ public class WaterPokemon implements Pokemon {
         return null;
     }
 
+    @Override
+    public void setHp(int damage) {
+        hp = hp - damage;
+    }
+
     public void surf(Pokemon pokemon, Pokemon gymPokemon) {
     }
 

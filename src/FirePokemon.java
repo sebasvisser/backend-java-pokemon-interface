@@ -50,6 +50,11 @@ public class FirePokemon implements Pokemon {
         return attacks;
     }
 
+    @Override
+    public void setHp(int damage) {
+        hp = hp - damage;
+    }
+
     public void inferno(Pokemon pokemon, Pokemon gymPokemon) {
     }
 

@@ -50,6 +50,11 @@ public class GrassPokemon implements Pokemon {
         return null;
     }
 
+    @Override
+    public void setHp(int damage) {
+        hp = hp - damage;
+    }
+
     public void leafStorm(Pokemon pokemon, Pokemon gymPokemon) {
     }
 

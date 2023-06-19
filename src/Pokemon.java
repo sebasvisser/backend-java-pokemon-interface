@@ -8,4 +8,6 @@ public interface Pokemon {
     String getSound();
     String getType();
     List<String> getAttacks();
+
+    void setHp(int damage);
 }
