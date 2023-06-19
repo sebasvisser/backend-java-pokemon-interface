@@ -59,9 +59,7 @@ De aanval methodes moeten de volgende eigenschappen hebben:
 - sluit de methode af met een `system.out.println` die de resteren hp waarde weergeeft van de vijand;
 
 De volgende methodes hebben nog een extra functie:
-// TODO
 - `rainDance` heeft geen effect op electric Pokemons maar geeft een `system.out.println` met de boodschap: "has no effect on (vijand)";
-- // TODO
 - `rainDance` levert een hp boost aan vijanden grass-types;
 - `thunder` levert een hp boost aan electric Pokemons;
 - `leechSeed` trekt hp van de vijand af en geeft deze hp aan de aanvallende Pokémon terug;

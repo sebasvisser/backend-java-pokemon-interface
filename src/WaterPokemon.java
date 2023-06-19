@@ -85,7 +85,43 @@ public class WaterPokemon implements Pokemon {
                 + " attacks "
                 + gymPokemon.getName()
                 + " with Rain Dance");
-        waterAttack(gymPokemon);
+        // waterAttack(gymPokemon); NIET IVM speciale attack functies
+        if(Objects.equals(gymPokemon.getType(), "Fire")){
+            System.out.println("It's Super Effective!");
+            System.out.println(gymPokemon.getName()
+                    + " loses 20 hp.");
+            gymPokemon.setHp(20);
+            System.out.println(gymPokemon.getName()
+                    + " has "
+                    + gymPokemon.getHp()
+                    + " hp remaining.");
+        }
+        if(Objects.equals(gymPokemon.getType(), "Electric")){
+            System.out.println("Rain Dance Has no effect on " + gymPokemon.getName());
+            System.out.println(gymPokemon.getName()
+                    + " has "
+                    + gymPokemon.getHp()
+                    + " hp remaining.");
+        }
+        if(Objects.equals(gymPokemon.getType(), "Grass")){
+            System.out.println(gymPokemon.getName()
+                    + " get's an hp boost!");
+            gymPokemon.setHp(-10);
+            System.out.println(gymPokemon.getName()
+                    + " has "
+                    + gymPokemon.getHp()
+                    + " hp remaining.");
+        }
+        if(Objects.equals(gymPokemon.getType(), "Water")){
+            System.out.println("It's Not Very Effective!");
+            System.out.println(gymPokemon.getName()
+                    + " loses 5 hp.");
+            gymPokemon.setHp(5);
+            System.out.println(gymPokemon.getName()
+                    + " has "
+                    + gymPokemon.getHp()
+                    + " hp remaining.");
+        }
     }
     private void waterAttack(Pokemon gymPokemon) {
         if(Objects.equals(gymPokemon.getType(), "Fire")){
