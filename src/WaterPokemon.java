@@ -2,11 +2,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class WaterPokemon implements Pokemon {
-    private String name;
+    private final String name;
     private int hp;
     private int level;
-    private String food;
-    private String sound;
+    private final String food;
+    private final String sound;
 
     public WaterPokemon(String name, int hp, int level, String food, String sound) {
         this.name = name;
@@ -164,4 +164,8 @@ public class WaterPokemon implements Pokemon {
                     + " hp remaining.");
         }
     }
+    public void levelUp(){
+        level++;
+    }
+
 }
