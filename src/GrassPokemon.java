@@ -78,6 +78,22 @@ public class GrassPokemon implements Pokemon {
                 + gymPokemon.getName()
                 + " with Leech Seed");
         grassAttack(gymPokemon);
+        if(Objects.equals(gymPokemon.getType(), "Electric")){
+            pokemon.setHp(-20);
+            System.out.println(pokemon.getName() + " stole 20 hp.");
+        }
+        if(Objects.equals(gymPokemon.getType(), "Fire")){
+            pokemon.setHp(-15);
+            System.out.println(pokemon.getName() + " stole 15 hp.");
+        }
+        if(Objects.equals(gymPokemon.getType(), "Water")){
+            pokemon.setHp(-10);
+            System.out.println(pokemon.getName() + " stole 10 hp.");
+        }
+        if(Objects.equals(gymPokemon.getType(), "Grass")){
+            pokemon.setHp(-5);
+            System.out.println(pokemon.getName() + " stole 5 hp.");
+        }
     }
 
     public void leaveBlade(Pokemon pokemon, Pokemon gymPokemon) {
