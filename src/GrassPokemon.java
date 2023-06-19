@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class GrassPokemon implements Pokemon {
     private String name;
     private int hp;
@@ -36,5 +38,27 @@ public class GrassPokemon implements Pokemon {
     @Override
     public String getSound() {
         return sound;
+    }
+
+    @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
+    public List<String> getAttacks() {
+        return null;
+    }
+
+    public void leafStorm(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void solarBeam(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void leechSeed(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void leaveBlade(Pokemon pokemon, Pokemon gymPokemon) {
     }
 }

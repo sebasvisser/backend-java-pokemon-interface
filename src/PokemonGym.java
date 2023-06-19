@@ -2,8 +2,6 @@ import java.util.List;
 
 public interface PokemonGym {
 
-
-
     void enteredTheGym(PokemonTrainer player1);
 
     void printPokemon(List<Pokemon> pokemons);
@@ -23,4 +21,6 @@ public interface PokemonGym {
     void performAttackPlayer(Pokemon pokemon, Pokemon gymPokemon, String attack);
 
     void gymOwnerAttacks(Pokemon gymPokemon, Pokemon pokemon);
+
+    void attackOrChange(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym);
 }

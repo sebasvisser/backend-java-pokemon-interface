@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class ElectricPokemon implements Pokemon {
     private String name;
     private int hp;
@@ -36,5 +38,27 @@ public class ElectricPokemon implements Pokemon {
     @Override
     public String getSound() {
         return sound;
+    }
+
+    @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
+    public List<String> getAttacks() {
+        return null;
+    }
+
+    public void thunderPunch(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void electroBall(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void thunder(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void voltTackle(Pokemon pokemon, Pokemon gymPokemon) {
     }
 }

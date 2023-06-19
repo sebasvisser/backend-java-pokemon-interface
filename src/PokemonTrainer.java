@@ -1,16 +1,20 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class PokemonTrainer {
     private String name;
-    private ArrayList<Pokemon> pokemons;
+    private List<Pokemon> pokemons;
 
-    public PokemonTrainer(String name, ArrayList<Pokemon> pokemons) {
+    public PokemonTrainer(String name, List<Pokemon> pokemons) {
         this.name = name;
         this.pokemons = pokemons;
     }
 
+    public List<Pokemon> getPokemons() {
+        return pokemons;
+    }
 
-    public ArrayList<Pokemon> getPokemons{
-        return ArrayList<>;
+    public String getName() {
+        return name;
     }
 }

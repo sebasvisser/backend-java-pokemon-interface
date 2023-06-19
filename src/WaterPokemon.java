@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class WaterPokemon implements Pokemon {
     private String name;
     private int hp;
@@ -36,5 +38,27 @@ public class WaterPokemon implements Pokemon {
     @Override
     public String getSound() {
         return sound;
+    }
+
+    @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
+    public List<String> getAttacks() {
+        return null;
+    }
+
+    public void surf(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void hydroPump(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void hydroCanon(Pokemon pokemon, Pokemon gymPokemon) {
+    }
+
+    public void rainDance(Pokemon pokemon, Pokemon gymPokemon) {
     }
 }
