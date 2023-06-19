@@ -1,12 +1,14 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class ElectricPokemon implements Pokemon {
+public class ElectricPokemon extends Pokemon {
     private final String name;
     private int hp;
     private int level;
     private final String food;
     private final String sound;
+    private final List<String> attacks;
 
     public ElectricPokemon(String name, int hp, int level, String food, String sound) {
         this.name = name;
@@ -14,6 +16,7 @@ public class ElectricPokemon implements Pokemon {
         this.level = level;
         this.food = food;
         this.sound = sound;
+        this.attacks = Arrays.asList("Thunder Punch", "Electro Ball", "Thunder", "Volt Tackle");
     }
 
     @Override
@@ -46,10 +49,9 @@ public class ElectricPokemon implements Pokemon {
         return "Electric";
     }
 
-// todo moet dit nog iets gaan doen?
-  @Override
+    @Override
     public List<String> getAttacks() {
-        return null;
+        return attacks;
     }
 
     @Override
@@ -133,8 +135,5 @@ public class ElectricPokemon implements Pokemon {
                     + gymPokemon.getHp()
                     + " hp remaining.");
         }
-    }
-    public void levelUp(){
-        level++;
     }
 }

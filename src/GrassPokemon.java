@@ -1,12 +1,15 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class GrassPokemon implements Pokemon {
+public class GrassPokemon extends Pokemon {
     private final String name;
     private int hp;
     private int level;
     private final String food;
     private final String sound;
+    private final List<String> attacks;
+
 
     public GrassPokemon(String name, int hp, int level, String food, String sound) {
         this.name = name;
@@ -14,6 +17,7 @@ public class GrassPokemon implements Pokemon {
         this.level = level;
         this.food = food;
         this.sound = sound;
+        this.attacks = Arrays.asList("Vine Whip", "Razor Leaf", "Solar Beam", "Leaf Storm");
     }
 
     @Override
@@ -43,12 +47,12 @@ public class GrassPokemon implements Pokemon {
 
     @Override
     public String getType() {
-        return null;
+        return "Grass";
     }
 
     @Override
     public List<String> getAttacks() {
-        return null;
+        return attacks;
     }
 
     @Override

@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Objects;
 
-public class FirePokemon implements Pokemon {
+public class FirePokemon extends Pokemon {
     private final String name;
     private int hp;
     private int level;
